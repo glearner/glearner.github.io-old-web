@@ -46,7 +46,12 @@
 #lab_social_icon_footer #git-em:hover {
   color: #000000;
 }
+#lab_social_icon_footer #linkedin-em:hover {
+  color: #007acc;
+}
+
 #para{
   font-family: sans-serif italic;
   font-size: 1.1rem;
+  text-align: left;
 }

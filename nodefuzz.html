@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand " href="index.html" style="padding-left: 2rem">
-          <img src="img/gk1.jpg" width="40" height="40" class="d-inline-block align-top" alt="" >
+          <img src="img/gk1.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
         </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,11 +25,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html"><b>Home </b><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html"><b>Home </b></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="about_me.html"><b>About Me </b></a>
+        <a class="nav-link" href="about_me.html"><b>About Me </b><span class="sr-only">(current)</span></a>
       </li>
+     
     </ul>
   </div>
 </nav>
@@ -37,39 +38,64 @@
 
   </head>
   <body>
-
   
-  <div class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="  height: auto; background-size: cover;" >
-      <img class="d-block w-100" src="img/bg2.jpg" alt="First slide">
-    </div>
-</div>
-  
-
 <div class="container">
-  <div>
-  <br>
-  <hr>
-    <h1 class="text-center"><a href="nodefuzz.html" style=" text-decoration: none;">Nodejs Fuzzing</a></h1>
-    <br>
-     <p id="para">I recently see a report on fuzzing of most popular EDA Nodejs.
+    <div class="text-center">
+      <br>
+      <h1>Fuzzing Nodejs using Node.fz</h1>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <br>
+          <div class="col-md-8">
+        <p id="para">I recently see a report on fuzzing of most popular EDA Nodejs.
 
 So I start to work on it and try to find some new bugs using Node.fz.
       <br> 
       <br>
       The importance of the <b>Event-Driven Architecture (EDA)</b> has never been greater. Web servers and the IoT alike have begun to adopt the EDA, and the popular server-side EDA framework, Node.js, boasts the world’s largest package ecosystem. While multi-threaded programming has been well studied in the literature, concurrency bug characteristics and useful development tools remain largely unexplored for serverside EDA-based applications.
-      <br></p>
-    </div>
-    <div>
-  <br>
-  <hr>
-   
-    <br>
-    </div>
+      <br>
+      <br>
+     I was totally focused on the concurrency bug of real world open-source
+event-driven applications, based in Node.js. Like multithreaded
+programs, event-driven programs are prone to concurrency
+bugs like atomicity violations and order violations.
+Some study shows the forms that atomicity violations and ordering
+violations take in the EDA context, and points out
+the limitations of existing concurrency error detection tools
+developed for client-side EDA applications. 
+      <br><br>
+      Based on my bug study and proposed Node.fz, a novel testing
+aid for server-side event-driven programs. Node.fz is a
+schedule fuzzing test tool for event-driven programs, embodied
+for server-side Node.js programs. Node.fz randomly perturbs
+the execution of a Node.js program, allowing Node.js
+developers to explore a variety of possible schedules. Thanks
+to its low overhead, Node.fz enables a developer to explore
+a broader “schedule space” with the same test time budget,
+ensuring that applications will be stable in a wide variety
+of deployment conditions. It shows that Node.fz can expose
+known bugs much more frequently than vanilla Node.js, and
+that it can uncover new bugs.
+      <br>
+      <br>
+      Fuzzing resulted with finding some bugs in <b>libuv</b> (C library for multi-threading) and <b>Non-determinism due to Callback Chains</b>.
+
+      <br>
+      <br>
+      Link to the research paper of <a href="http://people.cs.vt.edu/dongyoon/papers/EUROSYS-17-NodeFz.pdf">Node.fz</a>  
+      </p>
+      </div>
+      </div>
+      </div>
+
+    
+
 </div>
 
-
+<br>
 <section id="lab_social_icon_footer">
 <!-- Include Font Awesome Stylesheet in Header -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
